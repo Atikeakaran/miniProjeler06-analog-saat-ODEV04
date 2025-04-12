@@ -3,6 +3,7 @@ let mn = document.getElementById("min");
 let sc = document.getElementById("sc");
 
 let today = document.getElementById("date");
+let days = ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"];
 
 setInterval(() => {
     let day = new Date();
@@ -47,12 +48,12 @@ setInterval(() => {
     let gun = document.getElementById("gun");
     let ay = document.getElementById("ay");
     let yil = document.getElementById("yil");
-    //let gun2 = document.getElementById("gun2");
+    let gun2 = document.getElementById("gun2");
 
     g = day.getDay();
     a = day.getMonth();
     y = day.getFullYear();
-   // g2 = day.getUTCDay();
+   g2 = days[day.getDay()];
 
    g = (g < 10) ? "0" + g : g
    a = (a < 10) ? "0" + a : a
@@ -60,7 +61,7 @@ setInterval(() => {
     gun.innerHTML =g;
     ay.innerHTML=a;
     yil.innerHTML=y;
-   // gun2.innerHTML=g2;
+   gun2.innerHTML=g2;
 
 
 
